@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madev FUD</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            position: relative;
+            animation: glitch 1.5s infinite;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+                text-shadow: 1px 1px #00ff00, -1px -1px #00ff00;
+            }
+            20% {
+                transform: translate(-2px, 2px);
+                text-shadow: 2px 2px #00ff00, -2px -2px #00ff00;
+            }
+            40% {
+                transform: translate(2px, -2px);
+                text-shadow: -2px -2px #00ff00, 2px 2px #00ff00;
+            }
+            60% {
+                transform: translate(-2px, -2px);
+                text-shadow: 2px 2px #00ff00, -2px -2px #00ff00;
+            }
+            80% {
+                transform: translate(2px, 2px);
+                text-shadow: -2px -2px #00ff00, 2px 2px #00ff00;
+            }
+            100% {
+                transform: translate(0);
+                text-shadow: 1px 1px #00ff00, -1px -1px #00ff00;
+            }
+        }
+
+        nav {
+            background-color: #111;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00ff00;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            color: #00aa00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Madev FUD</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sample">Sample</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
