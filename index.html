@@ -77,6 +77,31 @@
             color: #76b900; /* Green color */
         }
 
+        .warning {
+            font-size: 1.2em;
+            color: #ff0000;
+            white-space: nowrap;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+
+        .warning p {
+            display: inline-block;
+            animation: scroll-left 15s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
         .glitch {
             position: relative;
             font-size: 2em;
@@ -174,6 +199,9 @@
         <a href="#">Research</a>
         <a href="#">Contact</a>
     </nav>
+    <div class="warning">
+        <p>This website does not promote any illegal activity. It is only for educational purposes, and we are not responsible for any malicious activity done by anyone.</p>
+    </div>
     <div id="wrapper">
         <h1 class="glitch" data-text="Advanced FUD: Penetrate Any AV and EDR Shield">
             Advanced FUD: Penetrate Any AV and EDR Shield
