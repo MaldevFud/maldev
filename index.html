@@ -188,8 +188,8 @@
         }
 
         .supported-c2 {
-            text-align: center;
-            margin-top: 20px;
+            text-align: left;
+            margin: 20px;
         }
 
         .supported-c2 h2 {
@@ -211,6 +211,15 @@
             margin: 10px 0;
             position: relative;
             animation: flicker 2s infinite;
+            padding-left: 20px;
+        }
+
+        .supported-c2 li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #00ff00;
+            animation: glitch 1s infinite;
         }
 
         @keyframes flicker {
