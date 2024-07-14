@@ -211,6 +211,7 @@
             position: relative;
             text-shadow: 1px 1px 5px #ff0000;
             padding-left: 20px;
+            animation: flicker 1.5s infinite alternate;
         }
 
         .supported-c2 li::before {
@@ -218,6 +219,17 @@
             position: absolute;
             left: 0;
             color: #ff0000;
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+                text-shadow: 1px 1px 5px #ff0000, -1px -1px 5px #ff0000;
+            }
+            20%, 24%, 55% {
+                opacity: 0.5;
+                text-shadow: none;
+            }
         }
     </style>
 </head>
