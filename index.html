@@ -7,7 +7,7 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #2b2b2b;
             color: #eaeaea;
         }
@@ -22,7 +22,7 @@
         header h1 {
             margin: 0;
             font-size: 2.5em;
-            color: #ff6f00;
+            color: #76b900; /* Green color */
             text-transform: uppercase;
             letter-spacing: 2px;
         }
@@ -44,7 +44,7 @@
         }
 
         nav a:hover {
-            color: #ff6f00;
+            color: #76b900; /* Green color */
         }
 
         .content {
@@ -53,7 +53,7 @@
         }
 
         .content h2 {
-            color: #ff6f00;
+            color: #76b900; /* Green color */
         }
 
         .content p {
@@ -65,7 +65,7 @@
             color: #888;
             text-align: center;
             padding: 10px;
-            position: absolute;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
@@ -78,7 +78,42 @@
             from { opacity: 0; }
             to   { opacity: 1; }
         }
+
+        .spacer {
+            margin: 20px 0;
+        }
+
+        .menu_icon img {
+            width: 24px;
+            height: auto;
+        }
+
+        .SmallYellowText {
+            color: #f0c674;
+            font-size: 0.9em;
+        }
+
+        .WhiteText {
+            color: #fff;
+        }
+
+        .RedText {
+            color: #cc0000;
+        }
+
+        .YellowText {
+            color: #f0c674;
+        }
+
+        .center {
+            text-align: center;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fancybox initialization can be done here if needed
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -93,6 +128,114 @@
     <div class="content">
         <h2 class="animate-fadein">Welcome to Maldev FUD</h2>
         <p class="animate-fadein">Your go-to resource for zero-day exploits and security research.</p>
+        <div class='spacer'></div>
+        <div class='menu_icon'>
+            <a title='0day Today Exploit DB Official Twitter' href="https://twitter.com/Inj3ct0r" target='_Blank'>
+                <img src='/img/tw_big.png' alt='0day Today Exploit DB Official Twitter'>
+            </a>
+        </div>
+        <div class='menu_icon'>
+            <a title='0day Today Exploit DB Official Facebook' href="https://www.facebook.com/Inj3ct0rs" target='_Blank'>
+                <img src='/img/fb_big.png' alt='0day Today Exploit DB Official Facebook'>
+            </a>
+        </div>
+        <div class='menu_icon'>
+            <a href='#no_telegram_popup' class='popup'>
+                <img src='/img/no_telegram_big.png' alt='No Telegram'>
+            </a>
+        </div>
+        <div id='no_telegram_popup' style="display:none;">
+            <div class='double_spacer'></div>
+            <div class='center'>
+                <img src='/img/no_telegram_big.png' alt='We DO NOT use Telegram or any messengers / social networks!'>
+            </div>
+            <div class='spacer'></div>
+            <h2 class='YellowText center' style='font-weight:400;'>We DO NOT use Telegram or any messengers / social networks!</h2>
+            <div class='spacer'></div>
+            <h2 class='YellowText center' style='font-weight:400;'>Please, beware of scammers!</h2>
+            <div class='spacer'></div>      
+        </div>
+        <div class='menu_icon'>
+            <a title='Tor Network' href='http://sq542reyqwagfkghieehykb6hh6ohku5irarrrbeeo5iyozdbhe5n3id.onion/' target='_Blank'>
+                <img src='/img/tor_big.png' alt='Tor'>
+            </a>
+        </div>
+        <div class='spacer'></div>
+        <div class='SmallYellowText'>
+            0day Today is the ultimate database of exploits and vulnerabilities and a great resource for vulnerability researchers and security professionals.
+            <br />Our aim is to collect exploits from submittals and various mailing lists and concentrate them in one, easy-to-navigate database.
+            <br />This was written solely for educational purposes. Use it at your own risk. The author will be not responsible for any damage. // r0073r 
+        </div>
+        <div class='spacer'></div>
+        <div>
+            <div class='WhiteText'>Select your language</div>
+            <div>
+                <a href='http://en.0day.today/'>
+                    <img src='/img/langs/en.png' alt='English'>
+                    <div class='TipText'>English</div>
+                </a>
+                <a href='http://ru.0day.today/'>
+                    <img src='/img/langs/ru.png' alt='Русский'>
+                    <div class='TipText'>Русский</div>
+                </a>
+                <a href='http://de.0day.today/'>
+                    <img src='/img/langs/de.png' alt='Deutsch'>
+                    <div class='TipText'>Deutsch</div>
+                </a>
+                <!-- Add more languages as needed -->
+            </div>
+        </div>
+        <div class='spacer'></div>
+        <div>
+            <div class='WhiteText'>Do you agree to these terms?</div>
+            <div class='spacer'></div>
+            <div>
+                <form method='post' class='agree_form'>
+                    <input class='button' type='submit' name='agree' value='Yes, I agree'>
+                </form>
+            </div>
+        </div>
+        <div class='spacer'></div>
+        <div class='RedText'>User Agreement</div>
+        <div class='YellowText'>
+            Anyone who accesses the site 0day.today MUST accept the Terms and Conditions (listed below) or instead immediately navigate away from 0day.today.
+            <br>If you DISAGREE with the Rules of 0day.today you MUST IMMEDIATELY navigate away from 0day.today.
+            <br>The 0day.today team gladly invites you to participate in our project - all you need to do is register to get started!
+        </div>
+        <div class='spacer'></div>
+        <div class='RedText'>General Information</div>
+        <div class='YellowText'>
+            Official information about 0day.today and its team is published exclusively on the 0day.today website. 
+            <br>Do not rely on the negative criticism/rumors others say - it's a MYTH! We do not deface ANY website and we do NOT attack any web-servers. 
+            <br>The 0day.today team specializes solely in bug research, not malicious actions.
+            <br>0day.today is released without any warranty and exists solely for educational purposes. 
+            <br>0day.today and its team are not responsible for illegal use of the information provided.
+            <br>0day.today is your new digital friend who will help you avoid many security problems on your website!
+        </div>
+        <div class='spacer'></div>
+        <div class='RedText'>Justice, Law, Programmer & Source Code</div>
+        <div class='YellowText'>
+            We pay extra attention to follow all necessary European laws, but we exercise our right to exchange information in a secure way.
+            <br>All the submitted vulnerabilities will be forwarded to the manufacturer of the product and will be published to protect your local environment.
+            <br>If a submission contains either malicious code, illegal comments and/or sensitive details, the submission will be removed or modified.
+        </div>
+        <div class='spacer'></div>
+        <div class='RedText'>0day.today Mission Statement</div>
+        <div class='YellowText'>
+            The 0day.today Mission is to provide a database of standards and technology to protect your information systems against possible threats.
+            <br>Some threats may be targeting the confidentiality or integrity of your information/processes and the availability of your information and services.
+            <br>Here at 0day.today, we try to inform you as soon as possible when new security breaches are discovered so you can take appropriate action to patch/fix them.
+        </div>
+        <div class='spacer'></div>
+        <div class='RedText'>Official Statement of the 0day.today Team</div>
+        <div class='YellowText'>
+            We do not approve or encourage anyone to nullify any vendor licenses, deface websites, hack into databases and/or trade with fraudulent or stolen material.
+            <br>We do not publish advisories/vulnerabilities which speak against certain religions, support terrorism/racism, or anything negative in nature.
+            <br>We do not allow any criminal activities or requests by members in our database or emails. Such examples will be deleted instantly without any comment.
+            <br>0day.today provides information to you 'as is' and will not be held responsible for any damage done to you.
+            <br>0day Today contains information which may be considered illegal in some countries. 
+            <br>Such information is provided here solely for educational purposes and is not intended to be used for illegal activities.  // 0day.today Administration
+        </div>
     </div>
     <footer>
         &copy; 2024 Maldev FUD. All rights reserved.
