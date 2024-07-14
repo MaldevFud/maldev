@@ -12,6 +12,9 @@
             font-family: 'Orbitron', monospace;
             background-color: #1d1f21;
             color: #eaeaea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         header {
@@ -20,6 +23,7 @@
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             position: relative;
+            width: 100%;
         }
 
         header h1 {
@@ -62,6 +66,7 @@
             display: flex;
             justify-content: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 100%;
         }
 
         nav a {
@@ -86,6 +91,8 @@
             padding: 10px 0;
             position: relative;
             animation: glitch 1s infinite;
+            width: 100%;
+            text-align: center;
         }
 
         .warning p {
@@ -113,6 +120,7 @@
             font-weight: 400; /* Reduced font weight */
             letter-spacing: 1px; /* Adjusted letter spacing */
             line-height: 1.5; /* Adjusted line height */
+            width: 100%;
         }
 
         .glitch::before,
@@ -187,24 +195,32 @@
             margin: 20px 0;
         }
 
-        .supported-c2 {
-            text-align: left;
-            margin: 150px 20px 40px 20px; /* Increased top margin */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
 
-        .supported-c2 h2 {
+        .supported-c2, .supported-av-edr {
+            margin: 150px 20px 40px 20px; /* Increased top margin */
+            width: 45%;
+        }
+
+        .supported-c2 h2, .supported-av-edr h2 {
             font-size: 1.8em;
             color: white;
             text-shadow: 1px 1px 0 #ff0000;
         }
 
-        .supported-c2 ul {
+        .supported-c2 ul, .supported-av-edr ul {
             list-style: none;
             padding: 0;
             margin: 20px 0;
         }
 
-        .supported-c2 li {
+        .supported-c2 li, .supported-av-edr li {
             font-size: 1.5em;
             color: white;
             margin: 10px 0;
@@ -214,7 +230,7 @@
             animation: flicker 1.5s infinite alternate;
         }
 
-        .supported-c2 li::before {
+        .supported-c2 li::before, .supported-av-edr li::before {
             content: '•';
             position: absolute;
             left: 0;
@@ -251,14 +267,35 @@
             Advanced FUD: Penetrate Any AV and EDR Shield
         </h1>
     </div>
-    <div class="supported-c2">
-        <h2>Supported C2 Frameworks</h2>
-        <ul>
-            <li>Mythic</li>
-            <li>Havoc</li>
-            <li>Brute Ratel</li>
-            <li>Cobalt Strike</li>
-        </ul>
+    <div class="content">
+        <div class="supported-c2">
+            <h2>Supported C2 Frameworks</h2>
+            <ul>
+                <li>Mythic</li>
+                <li>Havoc</li>
+                <li>Brute Ratel</li>
+                <li>Cobalt Strike</li>
+            </ul>
+        </div>
+        <div class="supported-av-edr">
+            <h2>Supported AV/EDR</h2>
+            <ul>
+                <li>Microsoft Defender</li>
+                <li>Symantec</li>
+                <li>McAfee</li>
+                <li>SentinelOne</li>
+                <li>Carbon Black</li>
+                <li>CrowdStrike</li>
+                <li>Kaspersky</li>
+                <li>360 Total Security</li>
+                <li>Bitdefender</li>
+                <li>Malwarebytes</li>
+                <li>Avira</li>
+                <li>Norton</li>
+                <li>Trend Micro</li>
+                <li>F-Secure</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
