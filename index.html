@@ -187,6 +187,42 @@
             margin: 20px 0;
         }
 
+        .supported-c2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .supported-c2 h2 {
+            font-size: 1.8em;
+            color: white;
+            text-shadow: 1px 1px 0 #00ff00;
+            animation: glitch 1s infinite;
+        }
+
+        .supported-c2 ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .supported-c2 li {
+            font-size: 1.5em;
+            color: #00ff00;
+            margin: 10px 0;
+            position: relative;
+            animation: flicker 2s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+                text-shadow: 1px 1px 5px #00ff00, -1px -1px 5px #00ff00;
+            }
+            20%, 24%, 55% {
+                opacity: 0.5;
+                text-shadow: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -206,6 +242,15 @@
         <h1 class="glitch" data-text="Advanced FUD: Penetrate Any AV and EDR Shield">
             Advanced FUD: Penetrate Any AV and EDR Shield
         </h1>
+    </div>
+    <div class="supported-c2">
+        <h2>Supported C2 Frameworks</h2>
+        <ul>
+            <li>Mythic</li>
+            <li>Havoc</li>
+            <li>Brute Ratel</li>
+            <li>Cobalt Strike</li>
+        </ul>
     </div>
 </body>
 </html>
