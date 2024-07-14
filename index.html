@@ -50,34 +50,12 @@
 
         header h1::before {
             left: 2px;
-            animation: glitch-1 2s infinite;
+            animation: glitch-1 2s infinite, blood-drip 3s infinite;
         }
 
         header h1::after {
             left: -2px;
-            animation: glitch-2 2s infinite;
-        }
-
-        nav {
-            background-color: #222;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        nav a {
-            color: #eaeaea;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #76b900; /* Green color */
+            animation: glitch-2 2s infinite, blood-drip 3s infinite;
         }
 
         @keyframes glitch-loop {
@@ -213,6 +191,40 @@
             100% {
                 clip: rect(45px, 9999px, 55px, 0);
             }
+        }
+
+        @keyframes blood-drip {
+            0% {
+                text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+            }
+            50% {
+                text-shadow: 0 5px 10px #ff0000, 0 10px 20px #ff0000, 0 15px 30px #ff0000;
+            }
+            100% {
+                text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+            }
+        }
+
+        nav {
+            background-color: #222;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #eaeaea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #76b900; /* Green color */
         }
 
         .animate-fadein {
