@@ -3,97 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madev FUD</title>
+    <title>Maldev FUD</title>
     <style>
         body {
-            background-color: #000;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, sans-serif;
+            background-color: #1d1f21;
+            color: #c5c8c6;
             margin: 0;
             padding: 0;
-        }
-
-        .container {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            position: relative;
-            animation: glitch 1.5s infinite;
-            text-shadow: 0 0 5px #00ff00;
-        }
-
-        @keyframes glitch {
-            0% {
-                transform: translate(0);
-                text-shadow: 1px 1px #00ff00, -1px -1px #00ff00;
-            }
-            20% {
-                transform: translate(-2px, 2px);
-                text-shadow: 2px 2px #00ff00, -2px -2px #00ff00;
-            }
-            40% {
-                transform: translate(2px, -2px);
-                text-shadow: -2px -2px #00ff00, 2px 2px #00ff00;
-            }
-            60% {
-                transform: translate(-2px, -2px);
-                text-shadow: 2px 2px #00ff00, -2px -2px #00ff00;
-            }
-            80% {
-                transform: translate(2px, 2px);
-                text-shadow: -2px -2px #00ff00, 2px 2px #00ff00;
-            }
-            100% {
-                transform: translate(0);
-                text-shadow: 1px 1px #00ff00, -1px -1px #00ff00;
-            }
-        }
-
-        nav {
-            background-color: #111;
-            padding: 10px 0;
-            margin-top: 10px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            height: 100vh;
+            text-align: center;
         }
 
-        nav ul li {
-            margin: 0 15px;
+        header {
+            background-color: #282a2e;
+            width: 100%;
+            padding: 20px 0;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #00ff00;
+        .premium-texture {
+            font-size: 2.5em;
+            color: gold;
+            background: linear-gradient(to right, #b3a125, #f7e218);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #f0c674;
+        }
+
+        p {
             font-size: 1.2em;
         }
 
-        nav ul li a:hover {
-            color: #00aa00;
+        .animate__animated {
+            --animate-duration: 1.5s;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .animate__fadeInDown {
+            animation: fadeInDown 1.5s;
+        }
+
+        .animate__fadeInUp {
+            animation: fadeInUp 1.5s;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Madev FUD</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#sample">Sample</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1 class="premium-texture animate__animated animate__fadeInDown">Maldev FUD</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome to Maldev FUD</h2>
+            <p>Your go-to resource for zero-day exploits and security research.</p>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate__fadeInUp');
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
